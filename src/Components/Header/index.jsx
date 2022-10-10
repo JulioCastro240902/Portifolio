@@ -1,25 +1,31 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/JC-logo.png";
+import WhiteLogo from "../../assets/JC-logo-white.png";
 
 import { useState } from "react";
+import MenuMobile from "../MenuMobile/MenuMobile";
 
 export default function Header() {
-  const [Open, setOpen] = useState(false);
+  const [MenuisOpen, setMenuisOpen] = useState(false);
 
   return (
-    <div className="w-full h-36">
-      <div className="flex justify-between items-center pl-16 pr-16 pt-8">
-        <figure className="w-32 h-32 rounded-full cursor-pointer">
+    <div>
+      <div className="flex flex-1 h-36 justify-between items-center pl-8 pr-8">
+        <figure className="w-32 h-32 inline-block">
           <Link to="/">
-            <img className="w-full h-full" src={Logo} alt="Website Logo" />
+            <img
+              className="w-full h-full z-[2] relative"
+              src={MenuisOpen ? WhiteLogo : Logo}
+              alt="Website Logo"
+            />
           </Link>
         </figure>
-        <nav className="w-[450px]">
-          <ul className="text-2xl flex justify-between items-center">
-            <li className="cursor-pointer hover:text-violet-600 ">
+        <nav className="w-[500px] hidden md:inline-block  ">
+          <ul className="text-3xl w-[100%] flex justify-between items-center">
+            <li className="cursor-pointer hover:text-violet-600">
               <Link to="/AboutMe">About me</Link>
             </li>
-            <li className="cursor-pointer hover:text-violet-600 ">
+            <li className="cursor-pointer hover:text-violet-600 transition-all ">
               <Link to="/Projects">Projects</Link>
             </li>
             <Link
@@ -32,6 +38,7 @@ export default function Header() {
             </Link>
           </ul>
         </nav>
+        <MenuMobile MenuisOpen={MenuisOpen} setMenuisOpen={setMenuisOpen} />
       </div>
     </div>
   );
