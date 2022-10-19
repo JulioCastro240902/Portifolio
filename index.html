@@ -15,5 +15,23 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background-color: #fff;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #a759f5;
+        border-radius: 8px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #8003ff;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </body>
 </html>

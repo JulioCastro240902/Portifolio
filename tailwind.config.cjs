@@ -14,6 +14,11 @@ module.exports = {
       fontFamily: {
         sans: ["Gemunu Libre", "sans-serif"],
       },
+      backgroundImage: {
+        Aisin: "url('./assets/Aisin.jpg')",
+        Pepsico: "url('./assets/Pepsico.jpg')",
+        Texxia: "url('./assets/Texxia.jpg')",
+      },
     },
   },
   plugins: [],
