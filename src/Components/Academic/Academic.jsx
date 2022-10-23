@@ -31,7 +31,10 @@ export default function Academic() {
         </div>
       </div>
       <div className=" w-full h-[20%] flex justify-center items-center">
-        <a className="text-2xl text-violet-600 underline cursor-pointer hover:pd-10">
+        <a
+          href="#Academic Formation"
+          className="text-2xl text-violet-600 underline cursor-pointer hover:pd-10"
+        >
           See more
         </a>
       </div>
